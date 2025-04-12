@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,6 +28,8 @@ public class Main {
         }
         */
 
+
+        /*
         ArrayList<Person> persons=new ArrayList<>();
         Person John=new Person("John");
         persons.add(John);
@@ -35,6 +38,26 @@ public class Main {
 
         for(Person person:persons) {
             System.out.println(person);
+        }
+        */
+
+        Scanner giris=new Scanner(System.in);
+        ArrayList<Person> persons=new ArrayList<>();
+
+        while(true) {
+            System.out.println("Enter a name.Empty will stop");
+            String name=giris.nextLine();
+            if(name.isEmpty()) {
+                break;
+            }
+            persons.add(new Person(name));
+
+            System.out.println();
+            System.out.println("persons in total:"+persons.size());
+            System.out.println("Persons:");
+            for(Person person:persons) {
+                System.out.println(person);
+            }
         }
 
 
